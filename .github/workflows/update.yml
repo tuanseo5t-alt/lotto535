@@ -3,7 +3,7 @@ name: Update Lotto 5/35 data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '35 11 * * *'  # 18:35 Vietnam, every day (Lotto 5/35 draws daily at 18:00)
+    - cron: '5 * * * *'  # every hour, every day (Lotto 5/35 draws daily at 18:00 Vietnam / 11:00 UTC)
 
 jobs:
   update-data:
@@ -21,6 +21,9 @@ jobs:
       - name: Fetch latest draw
         run: |
           python -c "import sys; sys.path.insert(0,'src'); from lotto535 import Lotto535; m=Lotto535(); m.load(); new=m.fetch(); m.dump(); print(f'Fetched {len(new)} new draw(s)')"
+
+      - name: Render README from latest draw
+        run: python src/render_readme.py
 
       - name: Commit changes
         run: |

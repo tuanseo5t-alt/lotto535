@@ -10,15 +10,15 @@ Kết quả xổ số điện toán LOTTO 5/35 mới nhất.
 
 **Số người trúng mỗi giải:**
 
-| Giải | Pattern | SL | Giá trị |
+| Giải | Pattern | SL | Giá trị (VNĐ) |
 | :--- | :------ | :-: | -----: |
-| Giải Độc Đắc (5+bonus) | O O O O O + O | 0 | 6.948.692.500 |
-| Giải Nhất (5) | O O O O O | 1 | 10.000.000 |
-| Giải Nhì (4+bonus) | O O O O + O | 9 | 5.000.000 |
-| Giải Ba (4) | O O O O | 85 | 500.000 |
-| Giải Tư (3+bonus) | O O O + O | 256 | 100.000 |
-| Giải Năm (3) | O O O | 3.021 | 30.000 |
-| Giải Khuyến Khích | OO + O O + O O | 22.028 | 10.000 |
+| Giải Độc Đắc | `O O O O O + O` | 0 | 6.948.692.500 |
+| Giải Nhất | `O O O O O` | 1 | 10.000.000 |
+| Giải Nhì | `O O O O + O` | 9 | 5.000.000 |
+| Giải Ba | `O O O O` | 85 | 500.000 |
+| Giải Tư | `O O O + O` | 256 | 100.000 |
+| Giải Năm | `O O O` | 3.021 | 30.000 |
+| Giải Khuyến Khích | `OO + O O + O O` | 22.028 | 10.000 |
 
 ## Data (Dữ liệu)
 
