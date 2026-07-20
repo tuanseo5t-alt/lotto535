@@ -3,7 +3,10 @@ name: Update Lotto 5/35 data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 * * * *'  # every hour, every day (Lotto 5/35 draws daily at 18:00 Vietnam / 11:00 UTC)
+    # Lotto 5/35 draws 2x/day, every day (Mon-Sun) at 13:00 and 21:00 Vietnam (UTC+7).
+    # 13:00 VN = 06:00 UTC -> poll at 06:20 UTC
+    # 21:00 VN = 14:00 UTC -> poll at 14:20 UTC
+    - cron: '20 6,14 * * *'
 
 jobs:
   update-data:
