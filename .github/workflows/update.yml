@@ -1,0 +1,35 @@
+name: Update Lotto 5/35 data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 11 * * *'  # 18:35 Vietnam, every day (Lotto 5/35 draws daily at 18:00)
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch latest draw
+        run: |
+          python -c "import sys; sys.path.insert(0,'src'); from lotto535 import Lotto535; m=Lotto535(); m.load(); new=m.fetch(); m.dump(); print(f'Fetched {len(new)} new draw(s)')"
+
+      - name: Commit changes
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No new data to commit"
+            exit 0
+          fi
+          git commit -m "Update Lotto 5/35: $(date +'%Y-%m-%d %H:%M UTC')"
+          git push

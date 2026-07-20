@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-07-20",
+    "draw_id": "00774",
+    "numbers": [
+      "03",
+      "12",
+      "17",
+      "27",
+      "35"
+    ],
+    "bonus": "07",
+    "jackpot_value": 6948692500,
+    "prizes": [
+      {
+        "prize": "Giải Độc Đắc",
+        "pattern": "O O O O O + O",
+        "pattern_count": 6,
+        "winner_count": 0,
+        "prize_value": 6948692500
+      },
+      {
+        "prize": "Giải Nhất",
+        "pattern": "O O O O O",
+        "pattern_count": 5,
+        "winner_count": 1,
+        "prize_value": 10000000
+      },
+      {
+        "prize": "Giải Nhì",
+        "pattern": "O O O O + O",
+        "pattern_count": 5,
+        "winner_count": 9,
+        "prize_value": 5000000
+      },
+      {
+        "prize": "Giải Ba",
+        "pattern": "O O O O",
+        "pattern_count": 4,
+        "winner_count": 85,
+        "prize_value": 500000
+      },
+      {
+        "prize": "Giải Tư",
+        "pattern": "O O O + O",
+        "pattern_count": 4,
+        "winner_count": 256,
+        "prize_value": 100000
+      },
+      {
+        "prize": "Giải Năm",
+        "pattern": "O O O",
+        "pattern_count": 3,
+        "winner_count": 3021,
+        "prize_value": 30000
+      },
+      {
+        "prize": "Giải Khuyến Khích",
+        "pattern": "OO + O O + O O",
+        "pattern_count": 4,
+        "winner_count": 22028,
+        "prize_value": 10000
+      }
+    ]
+  }
+]
